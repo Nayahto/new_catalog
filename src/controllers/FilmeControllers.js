@@ -1,8 +1,10 @@
 const filme = require("../models/Filmes")
 
+let message = " ";
+
 const getAll = async (req, res) => {
     try {
-        const filmes = await Filme.findAll();
+        const filmes = await filme.findAll();
         res.render("index", {
             filmes,
             filmesPut: null,
