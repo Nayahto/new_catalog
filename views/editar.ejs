@@ -1,0 +1,27 @@
+<%- include('./components/head')%>
+<body>
+    <%- include('./components/header')%>
+    <main>
+        <div class="container">
+            <span><% if(message != ""){message} %></span>
+                <form action="/editar/<%= Filme.id %>" method="post">
+                    <div class="item">
+                        <input type="text" name="nome" value="<%= filme.nome%>">
+                    </div>
+                    <div class="item">
+                        <input type="text" name="descricao" value="<%=filme.descricao %>">
+                    </div>
+                    <div class="item">
+                        <input type="text" name="imagem" value="<%= filme.imagem%>">
+                    </div>
+                    <div class="item">
+                        <button type="submit">salvar alterações</button>
+                    </div>
+                </form>
+        </div>
+    </main>
+    <%- include('./components/footer')%>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

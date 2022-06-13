@@ -1,12 +1,12 @@
-const filme = require("../models/Filmes")
+const Filme = require("../models/Filmes")
 
 let message = " ";
 
 const getAll = async (req, res) => {
     try {
-        const filmes = await filme.findAll();
+        const filme = await Filme.findAll();
         res.render("index", {
-            filmes,
+            filme,
             filmesPut: null,
             filmesDel: null,
             message,
@@ -17,6 +17,14 @@ const getAll = async (req, res) => {
     }
 }
 
+const getById = async (req,res) =>{
+    try {
+        const filme = await Filme.findByPK(req.params.id);
+    } catch (err) {
+        res.status(500).send({ err: err.message })
+    }
+}
 module.exports = {
     getAll,
+    getById
 }

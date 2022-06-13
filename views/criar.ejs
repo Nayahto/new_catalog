@@ -1,0 +1,25 @@
+<%- include('./components/head')%>
+<body>
+    <%- include('./components/header')%>
+    <main>
+        <div>
+            <form action="/create" method="post">
+                    <div class="item">
+                        <input type="text" name="nome">
+                    </div>
+                    <div class="item">
+                        <input type="text" name="descricao">
+                    </div>
+                    <div class="item">
+                        <input type="text" name="imagem">
+                    </div>
+                    <div class="item">
+                        <button type="submit">cadastrar</button>
+                    </div>
+            </form>
+        </div>
+    </main>
+    <%- include('./components/footer')%>
+    <script src="./js/script.js"></script>
+</body>
+</html>
