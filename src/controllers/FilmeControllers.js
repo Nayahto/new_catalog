@@ -6,6 +6,7 @@ const orderById = { order: [["id", "ASC"]] }
 
 const Op = require("sequelize").Op
 
+/*rota para todos os filmes*/
 const getAll = async (req, res) => {
     try {
         const filme = await Filme.findAll();
@@ -21,7 +22,7 @@ const getAll = async (req, res) => {
         res.status(500).send({ err: err.message })
     }
 }
-
+/*rota pra selecionar os filmes por id */
 const getById = async (req, res) => {
     try {
         const filme = await Filme.findByPk(req.params.id);
@@ -45,7 +46,7 @@ const criar = (req, res) => {
     }
 
 }
-
+/*rota para a cricao dos filmes */
 const criacao = async (req, res) => {
     try {
         const filme = req.body;
@@ -65,6 +66,8 @@ const criacao = async (req, res) => {
         res.status(500).send({ err: err.message })
     }
 }
+
+/*rota para encontrar o filme para edicao pelo id */
 const editar1 = async (req, res) => {
     const filme = await Filme.findByPk(req.params.id);
 
@@ -79,6 +82,7 @@ const editar1 = async (req, res) => {
     })
 }
 
+/*rota para a edicao */
 const editar = async (req, res) => {
     try {
         const filme = await Filme.findByPk(req.params.id);
@@ -95,6 +99,7 @@ const editar = async (req, res) => {
         res.status(500).send({ err: err.message })
     }
 }
+/*rota para deleção do filme pelo id */
 const deletar = async (req, res) => {
     try {
         await Filme.destroy({ where: { id: req.params.id } })

@@ -7,15 +7,15 @@
                 <form action="/editar/<%= filme.id %>" method="post">
                     <div class="item">
                         <label for="nome">Nome</label>
-                        <input type="text" name="nome" value="<%= filme.nome%>">
+                        <input type="text" name="nome" value="<%= filme.nome%>" required>
                     </div>
                     <div class="item">
                         <label for="descricao">Descricao</label>
-                        <input type="text" name="descricao" value="<%=filme.descricao %>">
+                        <input type="text" name="descricao" value="<%=filme.descricao %>" required>
                     </div>
                     <div class="item">
                         <label for="imagem">Imagem</label>
-                        <input type="text" name="imagem" value="<%= filme.imagem%>">
+                        <input type="text" name="imagem" value="<%= filme.imagem%>" required>
                     </div>
                     <div class="item">
                         <button type="submit">salvar alterações</button>
