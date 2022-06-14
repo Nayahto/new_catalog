@@ -9,22 +9,22 @@ const Filme = database.sequelize.define("filme",
         type: Sequelize.INTEGER,
         autoIncrement: true,
         allowNULL: false,
-        primaryKey: true,
+        primaryKey: true
     },
     nome:
     {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
     },
     descricao:
     {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
     },
     imagem:
     {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: false
     }
 },
 {

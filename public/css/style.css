@@ -1,0 +1,64 @@
+body {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    color: white;
+}
+
+a,
+h1 {
+    padding: 5px;
+    background-color: black ;
+    border: 1px black solid;
+    text-decoration: none;
+    color: white;
+margin-bottom: 15PX;
+margin-left: 5px;
+}
+
+img {
+    width: 200px;
+    height: 300px;
+}
+
+.container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto;
+    background-color: gray;
+    height: 100%;
+}
+input
+{
+    padding: 0px 20px;
+    margin: 5px auto;
+    display: block;
+}
+button
+.item {
+    padding: 5px;
+    margin: 5px;
+    background-color: black;
+    width: 460px;
+}
+
+label{
+    color: white;
+}
+
+footer
+{
+    bottom: 0%;
+}
+
+@media (max-width: 600px) {
+    .container {
+        display: block;
+        background-color: black;
+        margin: 0px auto;
+    }
+
+    .item {
+        width: 280px;
+    }
+}

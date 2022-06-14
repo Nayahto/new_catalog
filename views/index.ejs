@@ -3,17 +3,15 @@
     <%- include('./components/header')%>
     <main>
         <div class="container">
-            <% filme.forEach(item => { %>
+            <% filme.forEach(filme => { %>
             <div class="item">
-                <h2><%= item.nome %></h2>
-                <p><%= item.descricao %></p>
-                <a href="/filmes/:<%= filme.id %>"><img src="<%= item.imagem %>" alt="capa do filme"></a>
+                <h2><%= filme.nome %></h2>
+                <p><%= filme.descricao %></p>
+                <a href="/filmes/<%= filme.id %>"><img src="<%= filme.imagem %>" alt="capa do filme"></a>
             </div>
             <% }) %>
         </div>
     </main>
-    <%- include('./components/footer')%>
-    <script src="./js/script.js"></script>
 </body>
 
 </html>

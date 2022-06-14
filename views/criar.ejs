@@ -3,23 +3,19 @@
     <%- include('./components/header')%>
     <main>
         <div>
-            <form action="/create" method="post">
-                    <div class="item">
+            <form action="/criacao" method="post">
+                        <label for="nome">Nome</label>
                         <input type="text" name="nome">
-                    </div>
-                    <div class="item">
+
+                        <label for="descrcicao">Descricao</label>
                         <input type="text" name="descricao">
-                    </div>
-                    <div class="item">
+                        
+                        <label for="imagem">imagem</label>
                         <input type="text" name="imagem">
-                    </div>
-                    <div class="item">
+                        
                         <button type="submit">cadastrar</button>
-                    </div>
             </form>
         </div>
     </main>
-    <%- include('./components/footer')%>
-    <script src="./js/script.js"></script>
 </body>
 </html>
